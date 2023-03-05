@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>BMI Calculator</title>
+    
+</head>
+<body>
+    <h1>BMI Calculator</h1>
+    <form action="/" method="post">
+        <label for="weight">Weight (lb):</label>
+        <input type="text" name="weight" id="weight" required><br><br>
+        <label for="feet">Height (ft):</label>
+        <input type="text" name="feet" id="feet" required><br><br>
+        <label for="inches">Height (in):</label>
+        <input type="text" name="inches" id="inches" required><br><br>
+        <input type="submit" value="Calculate">
+    </form>
+
+    <style>
+        body {
+    background-color: #f8f9fa;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,.1);
+    padding: 30px;
+}
+
+h1 {
+    color: #343a40;
+}
+
+.form-group label {
+    color: #6c757d;
+    font-weight: bold;
+}
+
+.form-control {
+    border: 2px solid #6c757d;
+    border-radius: 5px;
+    box-shadow: none;
+}
+
+.form-control:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+    box-shadow: none;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+    background-color: #0069d9;
+    border-color: #0062cc;
+}
+
+.btn-block {
+    border-radius: 5px;
+}
+
+h2 {
+    color: #343a40;
+    font-size: 28px;
+}
+
+.text-success {
+    color: #28a745;
+}
+
+.text-danger {
+    color: #dc3545;
+}
+
+@media (max-width: 576px) {
+    h2 {
+        font-size: 24px;
+    }
+}
+
+    </style>
+
+    {% if bmi %}
+    <h2>Your BMI is {{ bmi }}{{ emoji }}</h2>
+
+    {% endif %}
+</body>
+
+</html>
+
+
